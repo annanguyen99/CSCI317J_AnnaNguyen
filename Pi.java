@@ -83,7 +83,7 @@ public class Pi {
 	public double standardDev(double[] score_array) {
 		double[] mean_array = new double[this.num_game];
 		for(int h = 0; h < this.num_game; h++) {
-			mean_array[h] = Math.pow((score_array[h] - this.mean), 2);
+			mean_array[h] = (score_array[h] - this.mean) * (score_array[h] - this.mean);
 		}
 		double s = 0; 
 		for(double o: mean_array) {
